@@ -9,7 +9,7 @@ ServiceMaps:
       type: device-source
       id: $.sourceUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-event-detail
