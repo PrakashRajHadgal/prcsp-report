@@ -58,7 +58,7 @@ ServiceMaps:
     - name: prscp-services-event-guest-index-v1
       type: event-guest
       id: $.notificationTemplateUuid , $.tenantId
-      isBulk: true
+      isBulk: false
       timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
