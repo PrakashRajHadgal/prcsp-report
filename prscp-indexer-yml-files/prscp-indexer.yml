@@ -57,7 +57,7 @@ ServiceMaps:
     indexes:
     - name: prscp-services-event-guest-index-v1
       type: event-guest
-      id: $.eventDetailUuid , $.tenantId
+      id: $.notificationTemplateUuid , $.tenantId
       isBulk: true
       timeStampField: $.createdTime
       jsonPath: $.RequestBody
@@ -77,7 +77,7 @@ ServiceMaps:
     indexes:
     - name: prscp-services-event-template-index-v1
       type: event-guest-template
-      id:  $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
+      id:  $.notificationTemplateUuid , $.tenantId
       isBulk: false
       timeStampField: $.createdTime
       jsonPath: $.RequestBody
@@ -87,7 +87,7 @@ ServiceMaps:
     indexes:
     - name: prscp-services-event-notification-index-v1
       type: event-invitation-notification
-      id: $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
+      id: $.notificationTemplateUuid , $.tenantId
       isBulk: false
       timeStampField: $.createdTime
       jsonPath: $.RequestBody
