@@ -169,7 +169,7 @@ ServiceMaps:
       type: event-committee
       id: $.committeeUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-committee
@@ -179,7 +179,7 @@ ServiceMaps:
       type: event-committee
       id: $.committeeUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-pressmaster
