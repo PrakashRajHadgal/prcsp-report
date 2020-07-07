@@ -189,7 +189,7 @@ ServiceMaps:
       type: event-press-master
       id: $.pressMasterUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-pressmaster
@@ -199,7 +199,7 @@ ServiceMaps:
       type: event-press-master
       id: $.pressMasterUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: persister-notification-resend-transitions
@@ -209,7 +209,7 @@ ServiceMaps:
       type: persister-notification-resend-transitions
       id: $.notificationResendUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-tender-notice
