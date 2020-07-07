@@ -19,7 +19,7 @@ ServiceMaps:
       type: prscp-services-event
       id: $.eventDetailUuid, $.eventId , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
    
   - topic: prscp-services-update-event-detail
@@ -29,7 +29,7 @@ ServiceMaps:
       type: prscp-services-event
       id: $.eventDetailUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-event-status
@@ -39,7 +39,7 @@ ServiceMaps:
       type: prscp-services-event
       id: $.eventDetailUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody      
 
   - topic: prscp-services-save-event-guest
@@ -49,7 +49,7 @@ ServiceMaps:
       type: event-guest
       id: $.eventGuestUuid, $.eventDetailUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-event-template-guest
@@ -59,7 +59,7 @@ ServiceMaps:
       type: event-guest
       id: $.eventDetailUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-event-template
@@ -69,7 +69,7 @@ ServiceMaps:
       type:  event-guest-template
       id: $.eventDetailUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-event-template
@@ -79,7 +79,7 @@ ServiceMaps:
       type: event-guest-template
       id:  $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-event-notification
@@ -89,7 +89,7 @@ ServiceMaps:
       type: event-invitation-notification
       id: $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-pressnote-sent-guest-acknowledgement
@@ -99,7 +99,7 @@ ServiceMaps:
       type: guest-acknowledgement
       id: $.pressNoteUuid,$.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-tender-sent-guest-acknowledgement
@@ -109,7 +109,7 @@ ServiceMaps:
       type: guest-acknowledgement
       id: $.tenderNoticeUuid,$.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-events-sent-guest-acknowledgement
@@ -119,7 +119,7 @@ ServiceMaps:
       type: guest-acknowledgement
       id: $.eventDetailUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody      
  
   - topic: prscp-services-save-invitations-resent-history
@@ -129,7 +129,7 @@ ServiceMaps:
       type: invitations-resent-history
       id: $.notificationResendUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-library
@@ -139,7 +139,7 @@ ServiceMaps:
       type: library
       id: $.libraryUuid, $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
       
   - topic: prscp-services-save-pressnote-topic
@@ -149,7 +149,7 @@ ServiceMaps:
       type: press-note
       id:  $.pressNoteUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
       
   - topic: prscp-services-update-pressnote-topic
@@ -159,7 +159,7 @@ ServiceMaps:
       type: press-note
       id:  $.pressNoteUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody      
 
   - topic:  prscp-services-save-committee
@@ -219,7 +219,7 @@ ServiceMaps:
       type: tender
       id: $.tenderNoticeUuid,$.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-tender-notice
@@ -229,7 +229,7 @@ ServiceMaps:
       type: tender
       id: $.tenderNoticeUuid,$.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-update-tender-notice-template
@@ -239,7 +239,7 @@ ServiceMaps:
       type: tender
       id: $.notificationTemplateUuid , $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody      
  
   - topic: prscp-services-update-tender-notice-publish
@@ -249,7 +249,7 @@ ServiceMaps:
       type: tender
       id: $.notificationTemplateUuid $.tenderNoticeUuid, $.tenantId
       isBulk: false
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-tender-notice-map-press
@@ -259,5 +259,5 @@ ServiceMaps:
       type: tender
       id:  $.tenderNoticeUuid , $.tenantId
       isBulk: true
-      timeStampField: $.RequestBody.createdTime
+      timeStampField: $.createdTime
       jsonPath: $.RequestBody
