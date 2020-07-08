@@ -247,10 +247,10 @@ ServiceMaps:
     indexes:
     - name: prscp-services-tender-notice-publish-index-v1
       type: tender
-      id: $.notificationTemplateUuid $.tenderNoticeUuid, $.tenantId
+      id:  $.tenderNoticeUuid, $.tenantId
       isBulk: false
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody
+      jsonPath: $.RequestBody.TenderNotice
 
   - topic: prscp-services-save-tender-notice-map-press
     configKey: INDEX
