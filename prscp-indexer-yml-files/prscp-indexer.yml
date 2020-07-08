@@ -150,7 +150,7 @@ ServiceMaps:
       id:  $.pressNoteUuid , $.tenantId
       isBulk: false
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody
+      jsonPath: $.RequestBody.PressNote
       
   - topic: prscp-services-update-pressnote-topic
     configKey: INDEX
@@ -160,7 +160,7 @@ ServiceMaps:
       id:  $.pressNoteUuid , $.tenantId
       isBulk: false
       timeStampField: $.createdTime
-      jsonPath: $.RequestBody      
+      jsonPath: $.RequestBody.PressNote   
 
   - topic:  prscp-services-save-committee
     configKey: INDEX
