@@ -129,7 +129,7 @@ ServiceMaps:
       type: invitations-resent-history
       id: $.notificationResendUuid , $.tenantId
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.resentTime
       jsonPath: $.RequestBody
 
   - topic: prscp-services-save-library
